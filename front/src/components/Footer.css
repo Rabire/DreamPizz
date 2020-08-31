@@ -48,14 +48,12 @@
 
 h2 {
   margin-bottom: 20px;
-  color: white;
 }
 
 h3 {
   margin-bottom: 20px;
-  color: white;
 }
 
-p {
+.txt-white {
   color: white;
 }
