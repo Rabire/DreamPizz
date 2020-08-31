@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>MY APP</h1>
+      <a href="/pizza">GO TO PIZZA ACREEN</a>
     </div>
   );
 }

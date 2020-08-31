@@ -6,9 +6,8 @@ function Header() {
   return (
     <div className="header">
       <div className="navbar">
-        <h1>Dream Pizz</h1>
-        <a href="/">Commander</a>
-        <a href="/users">Contact</a>
+        <a href="/">Dream Pizz</a>
+        <a href="/contact">Contact</a>
       </div>
       <br />
     </div>
