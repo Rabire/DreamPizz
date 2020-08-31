@@ -7,7 +7,6 @@ function Header() {
     <div className="header">
       <div className="navbar">
         <a href="/">Dream Pizz</a>
-        <a href="/contact">Contact</a>
       </div>
       <br />
     </div>
