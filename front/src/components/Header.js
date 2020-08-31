@@ -6,10 +6,14 @@ function Header() {
   return (
     <div className="header">
       <div className="navbar">
-        <img className="logo" src={Logo} alt="Logo of DreamPizz"></img>
-        <a className="tilte" href="/">
-          Dream Pizz
+        <a href="/accueil">
+          <img className="logo" src={Logo} alt="Logo of DreamPizz"></img>
         </a>
+        <div>
+          <a className="jsp" href="/menu">
+            Menu
+          </a>
+        </div>
       </div>
       <br />
     </div>

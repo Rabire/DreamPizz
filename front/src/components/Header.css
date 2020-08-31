@@ -7,15 +7,16 @@
 .navbar a {
   float: left;
   color: white;
-  text-align: baseline;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 25px;
-  margin-left: 50px;
+  margin-left: 25px;
+  justify-items: center;
+  align-content: center;
 }
 
 .navbar a:hover {
-  background-color: #ddd;
   color: black;
 }
 
@@ -26,5 +27,8 @@
 
 .logo {
   height: 75px;
-  margin-left: 10px;
+  cursor: pointer;
+}
+.jsp {
+  margin-top: 20px;
 }
