@@ -1,26 +1,50 @@
 import React from "react";
 
-import Pizza1 from "../assets/img/pizza1.jpeg";
+import kebab from "../assets/img/kebab.png";
 
 import "./Menu.css";
 
 function Menu() {
+  const pizzas = [
+    {
+      id: 1,
+      name: "La Kebab",
+      ingredient:
+        "Sauce yaourt à l’ail, mozzarella, viande kebab, tomates fraîches, oignons frais.",
+      img: "kebab.png",
+    },
+    {
+      id: 2,
+      name: "LA NOCTAMBULE",
+      ingredient: "Crème fraîche, mozzarella, lardons, oignons frais, origan.",
+      img: "noctambule.png",
+    },
+    {
+      id: 3,
+      name: "LA POPEYE",
+      ingredient:
+        "Epinard à la crème, mozzarella, chèvre, tomates fraîches, oignons frais, thym, herbes de provence.",
+      img: "popeye.png",
+    },
+  ];
+
+  const iconsPath = require.context("../assets/img/", true);
+
   return (
     <div className="menu">
-      <div className="left">
-        <img className="pizza-img" source={Pizza1} alt="pizza" />
-      </div>
-      <div className="right">
-        <h1>PIZZA NAME</h1>
-        <h3>Composition: </h3>
-        <div className="ingredient-list">
-          <p className="ingredient">Olives</p>
-          <p className="ingredient">Salade</p>
-          <p className="ingredient">FDSBDSB</p>
-          <p className="ingredient">vfdsdfv</p>
-          <p className="ingredient">tnt negrb</p>
+      {pizzas.map((pizza) => (
+        <div className="pizza-info">
+          <img
+            className="pizza-img"
+            src={iconsPath("./" + pizza.img)}
+            alt="pizza"
+          />
+          <div className="text">
+            <h3>{pizza.name}</h3>
+            <p>{pizza.ingredient}</p>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }
