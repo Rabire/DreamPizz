@@ -2,6 +2,8 @@
   background-color: beige;
   padding: 30px;
   display: flex;
+  position: absolute;
+  bottom: 0px;
 }
 
 .map {
@@ -34,7 +36,7 @@
 }
 
 .networkText {
-  width: 300px;
+  width: 310px;
 }
 
 .contact {
