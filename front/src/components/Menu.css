@@ -1,29 +1,21 @@
 .menu {
-  text-align: center;
-  display: flex;
-}
-
-.left {
-  width: 50%;
-  background-color: gold;
-}
-
-.right {
-  width: 50%;
-  background-color: red;
-}
-
-h1 {
-  margin-bottom: 30px;
-}
-
-.ingredient {
-  width: 50%;
-  background-color: green;
-  padding-bottom: 5px;
-}
-
-.ingredient-list {
+  margin-left: 10%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
+  background-color: #f8f9fa;
+}
+
+.pizza-info {
+  width: 50%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.text {
+  margin: 30px;
+}
+
+.pizza-img {
+  padding-left: 20;
 }
