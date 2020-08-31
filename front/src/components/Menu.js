@@ -1,7 +1,5 @@
 import React from "react";
 
-import kebab from "../assets/img/kebab.png";
-
 import "./Menu.css";
 
 function Menu() {
@@ -32,19 +30,23 @@ function Menu() {
 
   return (
     <div className="menu">
-      {pizzas.map((pizza) => (
-        <div className="pizza-info">
-          <img
-            className="pizza-img"
-            src={iconsPath("./" + pizza.img)}
-            alt="pizza"
-          />
-          <div className="text">
-            <h3>{pizza.name}</h3>
-            <p>{pizza.ingredient}</p>
+      <h1>NOS PIZZAS: </h1> <br />
+      <div className="pizzas">
+        {pizzas.map((pizza) => (
+          <div className="pizza-info">
+            <img
+              className="pizza-img"
+              src={iconsPath("./" + pizza.img)}
+              alt="pizza"
+            />
+            <div className="text">
+              <h3>{pizza.name}</h3>
+              <p>{pizza.ingredient}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <br />
     </div>
   );
 }

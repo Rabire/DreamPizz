@@ -1,6 +1,9 @@
 .menu {
-  margin-left: 10%;
-  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.pizzas {
   display: flex;
   flex-wrap: wrap;
   background-color: #f8f9fa;
