@@ -29,21 +29,19 @@ function Menu() {
     },
   ];
 
-  const iconsPath = require.context("../assets/img/", true);
-
   return (
     <div className="screen">
       <div className="menu">
         <h1>NOS PIZZAS: </h1> <br />
         <div className="pizzas-conatiner">
           {pizzas.map((pizza) => (
-            <Pizza pizza={pizza} />
+            <Pizza key={pizza.id} pizza={pizza} />
           ))}
         </div>
         <br />
       </div>
       <div className="cart">
-        <h1>Votre pannier</h1> <br />
+        <h1>VOTRE PANIER: </h1> <br />
         <div className="articles-conatiner"></div>
         <Article />
         <Article />

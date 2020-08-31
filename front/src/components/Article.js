@@ -5,7 +5,7 @@ import "./Article.css";
 import pizzaimage from "../assets/img/kebab.png";
 
 function Article({ pizza }) {
-  const iconsPath = require.context("../assets/img/", true);
+  // const iconsPath = require.context("../assets/img/", true);
 
   return (
     <div className="article-infos">

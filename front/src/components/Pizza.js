@@ -11,7 +11,10 @@ function Pizza({ pizza }) {
         className="pizza-img"
         src={iconsPath("./" + pizza.img)}
         alt="pizza"
+        height={150}
+        onClick={() => console.log("ajouter au panier")}
       />
+
       <div className="text-conatiner">
         <h3>{pizza.name}</h3>
         <p>{pizza.ingredient}</p>
