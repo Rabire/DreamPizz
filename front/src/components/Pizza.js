@@ -12,7 +12,7 @@ function Pizza({ pizza }) {
         src={iconsPath("./" + pizza.img)}
         alt="pizza"
       />
-      <div className="text">
+      <div className="text-conatiner">
         <h3>{pizza.name}</h3>
         <p>{pizza.ingredient}</p>
       </div>

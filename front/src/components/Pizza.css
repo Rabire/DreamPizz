@@ -1,0 +1,13 @@
+.pizza-info {
+  width: 50%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.text-conatiner {
+  margin: 30px;
+}
+
+.pizza-img:hover {
+  cursor: pointer;
+}

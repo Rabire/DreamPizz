@@ -1,9 +1,9 @@
 import React from "react";
 
 import Pizza from "./Pizza";
+import Article from "./Article";
 
 import "./Menu.css";
-import pizzaimage from "../assets/img/kebab.png";
 
 function Menu() {
   const pizzas = [
@@ -35,7 +35,7 @@ function Menu() {
     <div className="screen">
       <div className="menu">
         <h1>NOS PIZZAS: </h1> <br />
-        <div className="pizzas">
+        <div className="pizzas-conatiner">
           {pizzas.map((pizza) => (
             <Pizza pizza={pizza} />
           ))}
@@ -44,27 +44,12 @@ function Menu() {
       </div>
       <div className="cart">
         <h1>Votre pannier</h1> <br />
-        <div className="articles">
-          <div className="article-infos">
-            <img
-              className="pizza-img"
-              src={pizzaimage}
-              alt="pizza"
-              height={90}
-            />
-            <h4>NOM DE LA PIZZA</h4>
-            <div className="amount">
-              <div className="add-rm-button">
-                <h4 className="add-rm-button-txt">-</h4>
-              </div>
-              <h4 className="pizza-nb">10</h4>
-              <div className="add-rm-button">
-                <h4 className="add-rm-button-txt">+</h4>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="articles-conatiner"></div>
+        <Article />
+        <Article />
+        <Article />
       </div>
+      <br />
     </div>
   );
 }

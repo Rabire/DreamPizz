@@ -1,0 +1,47 @@
+.cart {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.pizza-name {
+  margin-top: 30px;
+}
+
+.article-infos {
+  background-color: #ebebeb;
+  justify-content: space-between;
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+}
+
+.add-rm-button {
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: dodgerblue;
+
+  cursor: pointer;
+}
+
+.add-rm-button-txt {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.pizza-nb {
+  text-align: center;
+}
+
+.add-rm-button:hover {
+  background-color: green;
+}
