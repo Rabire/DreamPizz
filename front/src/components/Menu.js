@@ -19,25 +19,38 @@ function Menu() {
   }, []);
 
   const [pizzasInCart, setPizzasInCart] = useState([]);
-  const [occurences, setOccurences] = useState(0);
 
   function round(value, precision) {
     var multiplier = Math.pow(10, precision || 0);
     return Math.round(value * multiplier) / multiplier;
   }
 
-  const numberOfOccurences = (pizza) => {
-    const count = pizzasInCart.reduce(function (n, val) {
-      return n + (val.name === pizza.name);
-    }, 0);
-    setOccurences(count);
+  let addedPizzas = pizzasInCart;
+
+  const addPizzaToCart = (pizza) => {
+    const index = addedPizzas.findIndex(
+      (addedPizza) => pizza.id === addedPizza.id
+    );
+    if (!addedPizzas.some((addedPizza) => pizza.id === addedPizza.id)) {
+      pizza.number = 1;
+      addedPizzas.push(pizza);
+      setPizzasInCart([...addedPizzas]);
+    } else {
+      addedPizzas[index].number++;
+      setPizzasInCart([...addedPizzas]);
+    }
   };
 
-  let addedPizzas = pizzasInCart;
-  const addPizzaToCart = (pizza) => {
-    addedPizzas.push(pizza);
+  const incrementNumber = (id) => {
+    const index = addedPizzas.findIndex((addedPizza) => id === addedPizza.id);
+    addedPizzas[index].number++;
     setPizzasInCart([...addedPizzas]);
-    numberOfOccurences(pizza);
+  };
+
+  const decrementNumber = (id) => {
+    const index = addedPizzas.findIndex((addedPizza) => id === addedPizza.id);
+    addedPizzas[index].number--;
+    setPizzasInCart([...addedPizzas]);
   };
 
   return (
@@ -67,7 +80,8 @@ function Menu() {
                 key={index}
                 pizza={pizzaInCart}
                 pizzasInCart={pizzasInCart}
-                numberOfOccurences={occurences}
+                incrementNumber={incrementNumber}
+                decrementNumber={decrementNumber}
               />
             ))}
             <br />
