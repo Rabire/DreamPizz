@@ -10,8 +10,11 @@ function Header() {
           <img className="logo" src={Logo} alt="Logo of DreamPizz"></img>
         </a>
         <div>
-          <a className="menutext" href="/menu">
+          <a className="Atext" href="/menu">
             Menu
+          </a>
+          <a className="Atext" href="/commande">
+            Commande
           </a>
         </div>
       </div>
