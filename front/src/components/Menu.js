@@ -121,7 +121,7 @@ function Menu() {
                 clickOnAdd={(infos) => console.log(infos)}
                 closeModal={closeCustomerInformationsModal}
                 articles={pizzasInCart}
-                totalamount={amount}
+                total_amount={amount}
               />
             )}
             <i>Toutes les pizzas sont a 8.90 €</i>

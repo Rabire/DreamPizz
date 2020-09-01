@@ -9,9 +9,9 @@ function CustomerInformationsForm({
   closeModal,
   clickOnAdd,
   articles,
-  totalamount,
+  total_amount,
 }) {
-  const [newOrder, setNewOrder] = useState({ articles, totalamount });
+  const [newOrder, setNewOrder] = useState({ articles, total_amount });
 
   function handleChange(e) {
     newOrder[e.target.name] = e.target.value;
