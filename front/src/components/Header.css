@@ -26,9 +26,11 @@
 }
 
 .logo {
-  height: 75px;
+  height: 40px;
+  width: 150px;
   cursor: pointer;
+  /* background: red; */
 }
 .Atext {
-  margin-top: 20px;
+  margin: 10px;
 }
