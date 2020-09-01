@@ -14,8 +14,8 @@ function Header() {
           <a className="Atext" href="/menu">
             Menu
           </a>
-          <a className="Atext" href="/commande">
-            Commandes
+          <a className="Atext" href="/administration">
+            Administration
           </a>
         </div>
       </div>

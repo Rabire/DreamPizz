@@ -15,8 +15,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Route exact path="/" component={App} />
       <Route path="/menu" component={Menu} />
-      <Route path="/commande" component={CommandeList} />
-      {/* path="/admin" */}
+      <Route path="/administration" component={CommandeList} />
     </BrowserRouter>
     <Footer />
   </React.StrictMode>,
