@@ -1,11 +1,11 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import Pizza1 from "../assets/img/pizzaImg/Pizza1.jpg";
-import Pizza2 from "../assets/img/pizzaImg/Pizza2.jpg";
-import Pizza3 from "../assets/img/pizzaImg/Pizza3.jpg";
-import Pizza4 from "../assets/img/pizzaImg/Pizza4.jpg";
-import Pizza5 from "../assets/img/pizzaImg/Pizza5.jpg";
+import Pizza1 from "../assets/img/slider/Pizza1.jpg";
+import Pizza2 from "../assets/img/slider/Pizza2.jpg";
+import Pizza3 from "../assets/img/slider/Pizza3.jpg";
+import Pizza4 from "../assets/img/slider/Pizza4.jpg";
+import Pizza5 from "../assets/img/slider/Pizza5.jpg";
 import "./Slider.css";
 
 const slideImages = [Pizza1, Pizza2, Pizza3, Pizza4, Pizza5];
