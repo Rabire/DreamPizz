@@ -40,6 +40,13 @@ function Menu() {
       setPizzasInCart([...addedPizzas]);
     }
   };
+  let amount = 0;
+  const calculateTotalPrice = () => {
+    for (const product of pizzasInCart) {
+      amount = round(amount + product.number * 8.9, 1);
+    }
+  };
+  calculateTotalPrice();
 
   const incrementNumber = (id) => {
     const index = addedPizzas.findIndex((addedPizza) => id === addedPizza.id);
@@ -92,7 +99,7 @@ function Menu() {
             <br />
             <br />
             <h1>Total: </h1>
-            <h3>{`${round(pizzasInCart.length * 8.9, 1)} Euros`}</h3>
+            <h3>{`${amount} Euros`}</h3>
             <h3 className="order-button" onClick={() => console.log("order")}>
               Passer la commande
             </h3>
