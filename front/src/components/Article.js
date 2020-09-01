@@ -4,7 +4,7 @@ import NoImg from "../assets/img/no-img.png";
 
 import "./Article.css";
 
-function Article({ pizza, numberOfOccurences }) {
+function Article({ pizza, incrementNumber, decrementNumber }) {
   const iconsPath = require.context("../assets/img/", true);
 
   return (
@@ -18,11 +18,25 @@ function Article({ pizza, numberOfOccurences }) {
       <h3 className="pizza-name">{pizza.name}</h3>
       <div className="amount">
         <div className="add-rm-button">
-          <h4 className="add-rm-button-txt">-</h4>
+          <h4
+            className="add-rm-button-txt"
+            onClick={() => {
+              decrementNumber(pizza.id);
+            }}
+          >
+            -
+          </h4>
         </div>
-        <h3 className="pizza-nb">{numberOfOccurences}</h3>
+        <h3 className="pizza-nb">{pizza.number}</h3>
         <div className="add-rm-button">
-          <h4 className="add-rm-button-txt-plus">+</h4>
+          <h4
+            className="add-rm-button-txt-plus"
+            onClick={() => {
+              incrementNumber(pizza.id);
+            }}
+          >
+            +
+          </h4>
         </div>
       </div>
     </div>
