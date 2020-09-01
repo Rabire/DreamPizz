@@ -18,6 +18,9 @@ const orderModel = {
   articles: {
     type: Sequelize.STRING,
   },
+  total_amount: {
+    type: Sequelize.DECIMAL,
+  },
   status: {
     type: Sequelize.INTEGER,
     // 1: en attente de confirmation

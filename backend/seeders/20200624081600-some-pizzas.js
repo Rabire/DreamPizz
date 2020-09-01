@@ -1,7 +1,5 @@
 "use strict";
 
-const hash = require("../src/controllers/hash.js");
-
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
