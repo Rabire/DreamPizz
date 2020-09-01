@@ -5,7 +5,7 @@ import NoImg from "../assets/img/no-img.png";
 import "./Pizza.css";
 
 function Pizza({ pizza, addPizzaToCart }) {
-  const iconsPath = require.context("../assets/img/", true);
+  const iconsPath = require.context("../assets/img/pizzas/", true);
 
   return (
     <div className="pizza-info">

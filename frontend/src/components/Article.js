@@ -5,7 +5,7 @@ import NoImg from "../assets/img/no-img.png";
 import "./Article.css";
 
 function Article({ pizza, incrementNumber, decrementNumber }) {
-  const iconsPath = require.context("../assets/img/", true);
+  const iconsPath = require.context("../assets/img/pizzas/", true);
 
   return (
     <div className="article-infos">
