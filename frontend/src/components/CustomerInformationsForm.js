@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+import axios from "axios";
 
 import "./CustomerInformationsForm.css";
 
@@ -7,7 +8,6 @@ Modal.setAppElement("#root");
 
 function CustomerInformationsForm({
   toggleModalVisibility,
-  createOrder,
   articles,
   total_amount,
 }) {
@@ -19,8 +19,14 @@ function CustomerInformationsForm({
   }
 
   function submitOrder() {
-    createOrder(newOrder);
-    toggleModalVisibility();
+    console.log({ newOrder });
+    axios
+      .post("http://localhost:3000/order", newOrder)
+      .then((res) => {
+        console.log(res);
+        toggleModalVisibility();
+      })
+      .catch(console.log);
   }
 
   return (

@@ -108,9 +108,8 @@ function Menu() {
             </h3>
             {isCustomerFormOpen && (
               <CustomerInformationsForm
-                createOrder={(infos) => console.log(infos)}
                 toggleModalVisibility={toggleModalVisibility}
-                articles={pizzasInCart}
+                articles={JSON.stringify(pizzasInCart)}
                 total_amount={amount}
               />
             )}

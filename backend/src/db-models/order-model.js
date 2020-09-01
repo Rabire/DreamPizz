@@ -16,7 +16,7 @@ const orderModel = {
     type: Sequelize.STRING,
   },
   articles: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
   },
   total_amount: {
     type: Sequelize.DECIMAL,

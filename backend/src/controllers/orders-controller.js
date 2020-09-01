@@ -12,10 +12,10 @@ exports.findAll = (req, res) => {
 };
 
 exports.addOrder = async (req, res) => {
-  const bodyReceived = req.body;
-  Orders.create(bodyReceived)
+  Orders.create(req.body)
     .then(res.sendStatus(201))
-    .catch(() => {
+    .catch((error) => {
+      console.log(error);
       res.sendStatus(500);
     });
 };
