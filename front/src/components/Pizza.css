@@ -1,13 +1,18 @@
 .pizza-info {
   width: 50%;
   display: flex;
-  padding-bottom: 20px;
 }
 
 .text-container {
   margin: 30px;
 }
 
+.pizza-img {
+  padding: 15px
+}
+
+
 .pizza-img:hover {
+
   cursor: pointer;
 }
