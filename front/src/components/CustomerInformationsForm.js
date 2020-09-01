@@ -5,8 +5,14 @@ import "./CustomerInformationsForm.css";
 
 Modal.setAppElement("#root");
 
-function CustomerInformationsForm({ closeModal, clickOnAdd }) {
-  const [newOrder, setNewOrder] = useState({});
+function CustomerInformationsForm({
+  closeModal,
+  clickOnAdd,
+  articles,
+  totalamount,
+}) {
+  const [newOrder, setNewOrder] = useState({ articles, totalamount });
+
   function handleChange(e) {
     newOrder[e.target.name] = e.target.value;
     setNewOrder({ ...newOrder });
@@ -31,13 +37,13 @@ function CustomerInformationsForm({ closeModal, clickOnAdd }) {
 
       <div className="form">
         <p>Nom complet :</p>
-        <input type="text" name="fullname" onChange={handleChange} />
+        <input type="text" name="client_fullname" onChange={handleChange} />
 
         <p>Adresse postale :</p>
-        <input type="text" name="address" onChange={handleChange} />
+        <input type="text" name="client_address" onChange={handleChange} />
 
         <p>Numéro de téléphone :</p>
-        <input type="text" name="phoneNumber" onChange={handleChange} />
+        <input type="text" name="client_phonenumber" onChange={handleChange} />
         <button className="add-user-button" onClick={addButton}>
           Commander
         </button>

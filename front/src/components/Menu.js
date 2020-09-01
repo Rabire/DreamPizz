@@ -118,8 +118,10 @@ function Menu() {
             </h3>
             {customerInformationsModalIsOpen && (
               <CustomerInformationsForm
-                clickOnAdd={() => console.log("envoyer la commande")}
+                clickOnAdd={(infos) => console.log(infos)}
                 closeModal={closeCustomerInformationsModal}
+                articles={pizzasInCart}
+                totalamount={amount}
               />
             )}
             <i>Toutes les pizzas sont a 8.90 €</i>
