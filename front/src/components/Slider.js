@@ -19,7 +19,6 @@ const Slideshow = () => {
           <div
             style={{
               backgroundImage: `url(${slideImages[0]})`,
-              top: "-1000px",
             }}
           ></div>
         </div>
@@ -27,7 +26,6 @@ const Slideshow = () => {
           <div
             style={{
               backgroundImage: `url(${slideImages[1]})`,
-              top: "-1000px",
             }}
           ></div>
         </div>
@@ -35,7 +33,6 @@ const Slideshow = () => {
           <div
             style={{
               backgroundImage: `url(${slideImages[2]})`,
-              top: "-1000px",
             }}
           ></div>
         </div>
@@ -43,7 +40,6 @@ const Slideshow = () => {
           <div
             style={{
               backgroundImage: `url(${slideImages[3]})`,
-              top: "-1000px",
             }}
           ></div>
         </div>

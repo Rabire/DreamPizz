@@ -7,6 +7,7 @@ import App from "./App";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
+import CommandeList from "./components/CommandeList";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Route exact path="/" component={App} />
       <Route path="/menu" component={Menu} />
+      <Route path="/commande" component={CommandeList} />
+      {/* path="/admin" */}
     </BrowserRouter>
     <Footer />
   </React.StrictMode>,
