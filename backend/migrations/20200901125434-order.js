@@ -1,5 +1,5 @@
 "use strict";
-const pizzaModel = require("../src/db-models/pizza-model");
+const odrerModel = require("../src/db-models/order-model");
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -8,7 +8,7 @@ module.exports = {
       Return a promise to correctly handle asynchronicity.
     */
 
-    return queryInterface.createTable("pizzas", pizzaModel);
+    return queryInterface.createTable("orders", odrerModel);
   },
 
   down: (queryInterface, Sequelize) => {
@@ -17,6 +17,6 @@ module.exports = {
       Return a promise to correctly handle asynchronicity.
     */
 
-    return queryInterface.dropTable("pizzas");
+    return queryInterface.dropTable("orders");
   },
 };
