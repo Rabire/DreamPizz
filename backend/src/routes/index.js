@@ -2,6 +2,8 @@ module.exports = (app) => {
   const pizzas = require("../controllers/pizzas-controller.js");
   const orders = require("../controllers/orders-controller.js");
 
+  /* PIZZAS */
+
   // Read all
   app.get("/pizzas", pizzas.findAll);
 
@@ -11,18 +13,20 @@ module.exports = (app) => {
   // Post to update or add
   app.post("/pizza", pizzas.addPizza);
 
+  /* ORDERS */
+
   // Read all orders
   app.get("/orders", orders.findAll);
 
   // create order
   app.post("/order", orders.addOrder);
 
-  // // confirmation
+  // confirmation
   // app.put("/pizza/:id", orders.confirmation);
 
-  // // preparation
+  // preparation
   // app.put("/pizza/:id", orders.preparation);
 
-  // // livraison
+  // livraison
   // app.put("/pizza/:id", orders.livraison);
 };
