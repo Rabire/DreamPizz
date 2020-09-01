@@ -10,12 +10,11 @@ function Header() {
           <img className="logo" src={Logo} alt="Logo of DreamPizz"></img>
         </a>
         <div>
-          <a className="jsp" href="/menu">
+          <a className="menutext" href="/menu">
             Menu
           </a>
         </div>
       </div>
-      <br />
     </div>
   );
 }
