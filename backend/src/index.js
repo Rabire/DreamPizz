@@ -11,7 +11,6 @@ db.sequelize.sync();
 app.use(bodyParser.json());
 app.use(cors("http://localhost:" + port));
 
-// Require the questions routes
 require("./routes")(app);
 
 app.listen(port, () =>
