@@ -44,7 +44,7 @@ function CustomerInformationsForm({
 
         <p>Numéro de téléphone :</p>
         <input type="text" name="client_phonenumber" onChange={handleChange} />
-        <button className="add-user-button" onClick={addButton}>
+        <button className="add-order-button" onClick={addButton}>
           Commander
         </button>
       </div>

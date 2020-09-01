@@ -7,7 +7,7 @@ module.exports = (app) => {
   // Read all
   app.get("/pizzas", pizzas.findAll);
 
-  // Delete one user
+  // Delete one pizza
   app.delete("/pizza/:id", pizzas.deleteById);
 
   // Post to update or add

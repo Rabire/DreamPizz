@@ -14,13 +14,13 @@ exports.findAll = (req, res) => {
 exports.deleteById = async (req, res) => {
   const urlId = req.params.id;
 
-  const userToDelete = await Pizzas.findOne({
+  const pizzaToDelete = await Pizzas.findOne({
     where: {
       id: urlId,
     },
   });
 
-  await userToDelete
+  await pizzaToDelete
     .destroy()
     .then(res.sendStatus(202))
     .catch(() => res.sendStatus(500));
