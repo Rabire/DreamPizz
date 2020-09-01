@@ -2,6 +2,10 @@ import React from "react";
 import "./Commande.css";
 
 function Commande({ order }) {
+  const updateToNextStep = () => {
+    // API PUT
+  };
+
   return (
     <div key={order.id} className="commande-infos">
       <h3>{order.client_fullname}</h3>
@@ -21,7 +25,9 @@ function Commande({ order }) {
         <strong>Adresse : </strong>
         {order.client_address}
       </p>
-      <h3 className="status-btn">Passer la commande en cours de préparation</h3>
+      <h3 className="status-btn" onClick={updateToNextStep}>
+        Passer la commande en cours de préparation
+      </h3>
     </div>
   );
 }
