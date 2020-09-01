@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/img/Logo3.png";
+import Logo from "../assets/img/dream-pizz-logo.png";
 
 import "./Header.css";
 
