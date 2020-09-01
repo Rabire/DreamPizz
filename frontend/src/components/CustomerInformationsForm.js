@@ -11,7 +11,11 @@ function CustomerInformationsForm({
   articles,
   total_amount,
 }) {
-  const [newOrder, setNewOrder] = useState({ articles, total_amount });
+  const [newOrder, setNewOrder] = useState({
+    articles,
+    total_amount,
+    status: 1,
+  });
 
   function handleChange(e) {
     newOrder[e.target.name] = e.target.value;
