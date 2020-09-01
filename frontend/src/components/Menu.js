@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
+import { round } from "../utils/round-decimal-number";
+
 import CustomerInformationsForm from "./CustomerInformationsForm";
 import Pizza from "./Pizza";
 import Article from "./Article";
@@ -8,7 +11,10 @@ import "./Menu.css";
 
 function Menu() {
   const [pizzas, setPizzas] = useState([]);
+  const [pizzasInCart, setPizzasInCart] = useState([]);
+  const [isCustomerFormOpen, setIsCustomerFormOpen] = useState(false);
 
+  /* Recuperation de la liste des pizzas depuis l'API */
   useEffect(() => {
     axios
       .get("http://localhost:3000/pizzas")
@@ -18,25 +24,13 @@ function Menu() {
       .catch(console.log);
   }, []);
 
-  const [pizzasInCart, setPizzasInCart] = useState([]);
-  const [
-    customerInformationsModalIsOpen,
-    setcustomerInformationsModalIsOpen,
-  ] = React.useState(false);
-
-  function openCustomerInformationsModal() {
-    setcustomerInformationsModalIsOpen(true);
-  }
-  function closeCustomerInformationsModal() {
-    setcustomerInformationsModalIsOpen(false);
-  }
-  function round(value, precision) {
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(value * multiplier) / multiplier;
+  /* Visibilitée du formulaire de commande */
+  function toggleModalVisibility() {
+    setIsCustomerFormOpen(!isCustomerFormOpen);
   }
 
+  /* Gestion du panier */
   let addedPizzas = pizzasInCart;
-
   const addPizzaToCart = (pizza) => {
     const index = addedPizzas.findIndex(
       (addedPizza) => pizza.id === addedPizza.id
@@ -50,20 +44,19 @@ function Menu() {
       setPizzasInCart([...addedPizzas]);
     }
   };
-  let amount = 0;
-  const calculateTotalPrice = () => {
-    for (const product of pizzasInCart) {
-      amount = round(amount + product.number * 8.9, 1);
-    }
-  };
-  calculateTotalPrice();
 
+  /* Calcul du prix total */
+  let amount = 0;
+  for (const product of pizzasInCart) {
+    amount = round(amount + product.number * 8.9, 1);
+  }
+
+  /* Logique des boutons pour ajouter/retirer des pizzas au panier */
   const incrementNumber = (id) => {
     const index = addedPizzas.findIndex((addedPizza) => id === addedPizza.id);
     addedPizzas[index].number++;
     setPizzasInCart([...addedPizzas]);
   };
-
   const decrementNumber = (id) => {
     const index = addedPizzas.findIndex((addedPizza) => id === addedPizza.id);
     addedPizzas[index].number--;
@@ -110,16 +103,13 @@ function Menu() {
             <br />
             <h1>Total: </h1>
             <h3>{`${amount} Euros`}</h3>
-            <h3
-              className="order-button"
-              onClick={openCustomerInformationsModal}
-            >
+            <h3 className="order-button" onClick={toggleModalVisibility}>
               Passer la commande
             </h3>
-            {customerInformationsModalIsOpen && (
+            {isCustomerFormOpen && (
               <CustomerInformationsForm
-                clickOnAdd={(infos) => console.log(infos)}
-                closeModal={closeCustomerInformationsModal}
+                createOrder={(infos) => console.log(infos)}
+                toggleModalVisibility={toggleModalVisibility}
                 articles={pizzasInCart}
                 total_amount={amount}
               />
