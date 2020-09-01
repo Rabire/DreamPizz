@@ -2,15 +2,18 @@ import React from "react";
 
 import "./Article.css";
 
-import pizzaimage from "../assets/img/kebab.png";
-
 function Article({ pizza }) {
-  // const iconsPath = require.context("../assets/img/", true);
+  const iconsPath = require.context("../assets/img/", true);
 
   return (
     <div className="article-infos">
-      <img className="pizza-img" src={pizzaimage} alt="pizza" height={90} />
-      <h3 className="pizza-name">NOM DE LA PIZZA</h3>
+      <img
+        className="pizza-img"
+        src={iconsPath("./" + pizza.img)}
+        alt="pizza"
+        height={90}
+      />
+      <h3 className="pizza-name">{pizza.name}</h3>
       <div className="amount">
         <div className="add-rm-button">
           <h4 className="add-rm-button-txt">-</h4>
