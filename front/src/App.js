@@ -1,19 +1,11 @@
 import React from "react";
 import "./App.css";
+import Slideshow from "./components/Slider";
 
 function App() {
   return (
     <div className="app">
-      <h1>SLIDER</h1>
-      <h1>SLIDER</h1>
-      <h1>SLIDER</h1>
-      <h1>SLIDER</h1>
-      <h1>SLIDER</h1>
-      <h1>SLIDER</h1>
-      <h1>SLIDER</h1>
-      <h1>SLIDER</h1>
-      <h1>SLIDER</h1>
-      <h1>SLIDER</h1>
+      <Slideshow />
     </div>
   );
 }
