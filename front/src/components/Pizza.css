@@ -9,6 +9,12 @@
   margin: 30px;
 }
 
+.pizza-img {
+  padding: 15px
+}
+
+
 .pizza-img:hover {
+
   cursor: pointer;
 }
