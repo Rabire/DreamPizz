@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import CustomerInformationsForm from "./CustomerInformationsForm";
 import Pizza from "./Pizza";
 import Article from "./Article";
 
@@ -19,7 +19,17 @@ function Menu() {
   }, []);
 
   const [pizzasInCart, setPizzasInCart] = useState([]);
+  const [
+    customerInformationsModalIsOpen,
+    setcustomerInformationsModalIsOpen,
+  ] = React.useState(false);
 
+  function openCustomerInformationsModal() {
+    setcustomerInformationsModalIsOpen(true);
+  }
+  function closeCustomerInformationsModal() {
+    setcustomerInformationsModalIsOpen(false);
+  }
   function round(value, precision) {
     var multiplier = Math.pow(10, precision || 0);
     return Math.round(value * multiplier) / multiplier;
@@ -100,9 +110,18 @@ function Menu() {
             <br />
             <h1>Total: </h1>
             <h3>{`${amount} Euros`}</h3>
-            <h3 className="order-button" onClick={() => console.log("order")}>
+            <h3
+              className="order-button"
+              onClick={openCustomerInformationsModal}
+            >
               Passer la commande
             </h3>
+            {customerInformationsModalIsOpen && (
+              <CustomerInformationsForm
+                clickOnAdd={() => console.log("envoyer la commande")}
+                closeModal={closeCustomerInformationsModal}
+              />
+            )}
             <i>Toutes les pizzas sont a 8.90 €</i>
             <br />
             <br />
