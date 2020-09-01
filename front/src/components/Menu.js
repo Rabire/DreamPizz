@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Pizza from "./Pizza";
 import Article from "./Article";
@@ -29,23 +29,35 @@ function Menu() {
     },
   ];
 
+  const [pizzasInCart, setPizzasInCart] = useState([]);
+  let addedPizzas = pizzasInCart;
+  const addPizzaToCart = (pizza) => {
+    addedPizzas.push(pizza);
+    setPizzasInCart([...addedPizzas]);
+    console.log(pizzasInCart);
+  };
+
   return (
     <div className="screen">
       <div className="menu">
         <h1>NOS PIZZAS: </h1> <br />
-        <div className="pizzas-conatiner">
+        <div className="pizzas-container">
           {pizzas.map((pizza) => (
-            <Pizza key={pizza.id} pizza={pizza} />
+            <Pizza
+              key={pizza.id}
+              pizza={pizza}
+              addPizzaToCart={addPizzaToCart}
+            />
           ))}
         </div>
         <br />
       </div>
+
       <div className="cart">
         <h1>VOTRE PANIER: </h1> <br />
-        <div className="articles-conatiner"></div>
-        <Article />
-        <Article />
-        <Article />
+        {pizzasInCart.map((pizzaInCart, index) => (
+          <Article key={index} pizza={pizzaInCart} />
+        ))}
       </div>
       <br />
     </div>
