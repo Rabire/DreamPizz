@@ -1,5 +1,6 @@
 .screen {
   display: flex;
+  padding-top: 20px;
 }
 
 .menu {
@@ -22,4 +23,30 @@
 h3,
 p {
   color: #333;
+}
+
+h5 {
+  font-weight: normal;
+  padding-left: 100px;
+}
+
+.order-button {
+  background-color: green;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  border: 2px solid green;
+  cursor: pointer;
+  margin: 0;
+}
+
+.order-button:hover {
+  background-color: white;
+  color: green;
+}
+
+i {
+  font-size: small;
+  color: silver;
 }
