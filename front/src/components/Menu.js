@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import Pizza from "./Pizza";
 import Article from "./Article";
@@ -6,28 +7,16 @@ import Article from "./Article";
 import "./Menu.css";
 
 function Menu() {
-  const pizzas = [
-    {
-      id: 1,
-      name: "LA KEBAB",
-      ingredient:
-        "Sauce yaourt à l’ail, mozzarella, viande kebab, tomates fraîches, oignons frais.",
-      img: "kebab.png",
-    },
-    {
-      id: 2,
-      name: "LA NOCTAMBULE",
-      ingredient: "Crème fraîche, mozzarella, lardons, oignons frais, origan.",
-      img: "noctambule.png",
-    },
-    {
-      id: 3,
-      name: "LA POPEYE",
-      ingredient:
-        "Epinard à la crème, mozzarella, chèvre, tomates fraîches, oignons frais, thym, herbes de provence.",
-      img: "popeye.png",
-    },
-  ];
+  const [pizzas, setPizzas] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/pizzas")
+      .then((res) => {
+        setPizzas(res.data);
+      })
+      .catch(console.log);
+  }, []);
 
   const [pizzasInCart, setPizzasInCart] = useState([]);
   const [occurences, setOccurences] = useState(0);
