@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Article.css";
 
-function Article({ pizza }) {
+function Article({ pizza, numberOfOccurences }) {
   const iconsPath = require.context("../assets/img/", true);
 
   return (
@@ -18,9 +18,9 @@ function Article({ pizza }) {
         <div className="add-rm-button">
           <h4 className="add-rm-button-txt">-</h4>
         </div>
-        <h3 className="pizza-nb">10</h3>
+        <h3 className="pizza-nb">{numberOfOccurences}</h3>
         <div className="add-rm-button">
-          <h4 className="add-rm-button-txt">+</h4>
+          <h4 className="add-rm-button-txt-plus">+</h4>
         </div>
       </div>
     </div>

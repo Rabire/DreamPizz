@@ -1,5 +1,8 @@
 .pizza-name {
   margin-top: 30px;
+  position: absolute;
+  font-size: 20px;
+  padding-left: 100px;
 }
 
 .article-infos {
@@ -14,6 +17,9 @@
 .amount {
   display: flex;
   align-items: center;
+  position: absolute;
+  right: 15px;
+  padding-top: 50px;
 }
 
 .add-rm-button {
@@ -21,9 +27,6 @@
   width: 40px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 20px;
-  background-color: dodgerblue;
-
   cursor: pointer;
 }
 
@@ -32,11 +35,17 @@
   font-size: 16px;
   margin-top: 10px;
 }
+.add-rm-button-txt-plus {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 12px;
+}
 
 .pizza-nb {
   text-align: center;
+  padding-top: 20px;
 }
 
 .add-rm-button:hover {
-  background-color: green;
+  color: dodgerblue;
 }
