@@ -1,7 +1,7 @@
 const db = require("../db-models/mysql-model");
 const orderModel = require("../db-models/order-model");
 
-const Orders = db.sequelize.define("pizzas", orderModel);
+const Orders = db.sequelize.define("orders", orderModel);
 
 exports.findAll = (req, res) => {
   Orders.findAll()
@@ -9,10 +9,6 @@ exports.findAll = (req, res) => {
     .catch(() => {
       res.sendStatus(500);
     });
-};
-
-exports.deleteById = (req, res) => {
-  const urlId = req.params.id;
 };
 
 exports.addOrder = async (req, res) => {

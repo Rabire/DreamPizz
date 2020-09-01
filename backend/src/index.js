@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors("http://localhost:" + port));
 
 // Require the questions routes
-require("./routes/pizzas-route.js")(app);
+require("./routes")(app);
 
 app.listen(port, () =>
   console.log(`Example listening at http://localhost:${port}`)
