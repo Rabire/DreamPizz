@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./Commande.css";
 
 function Commande({ order }) {
@@ -14,8 +15,13 @@ function Commande({ order }) {
         {order.id}
       </p>
       <p>
-        <strong>Articles : </strong>
-        {order.articles}
+        <strong>Articles : </strong> <br />
+        {JSON.parse(order.articles).map((article) => (
+          <span>
+            {`x${article.number} : ${article.name}`}
+            <br />
+          </span>
+        ))}
       </p>
       <p>
         <strong>Heure de la commande : </strong>

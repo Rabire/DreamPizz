@@ -22,42 +22,42 @@ function CommandeList() {
         createdAt: "2020-09-01T19:20:02.000Z",
         updatedAt: "2020-09-01T19:20:02.000Z",
       },
-      // {
-      //   id: 2,
-      //   client_fullname: "Yann LE BOSS",
-      //   client_phonenumber: "678-524-8038",
-      //   client_address: "3170  Hanifan Lane",
-      //   articles:
-      //     '[{"id":2,"name":"LA NOCTAMBULE","ingredients":"Crème fraîche, mozzarella, lardons, oignons frais, origan.","image":"noctambule.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":4},{"id":1,"name":"LA KEBAB","ingredients":"Sauce yaourt à l’ail, mozzarella, viande kebab, tomates fraîches, oignons frais.","image":"kebab.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":1},{"id":3,"name":"LA POPEYE","ingredients":"Epinard à la crème, mozzarella, chèvre, tomates fraîches, oignons frais, thym, herbes de provence.","image":"popeye.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":2}]',
-      //   total_amount: "62",
-      //   status: 0,
-      //   createdAt: "2020-09-01T19:25:28.000Z",
-      //   updatedAt: "2020-09-01T19:25:28.000Z",
-      // },
-      // {
-      //   id: 3,
-      //   client_fullname: "Yann LE BOSS",
-      //   client_phonenumber: "678-524-8038",
-      //   client_address: "3170  Hanifan Lane",
-      //   articles:
-      //     '[{"id":2,"name":"LA NOCTAMBULE","ingredients":"Crème fraîche, mozzarella, lardons, oignons frais, origan.","image":"noctambule.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":4},{"id":1,"name":"LA KEBAB","ingredients":"Sauce yaourt à l’ail, mozzarella, viande kebab, tomates fraîches, oignons frais.","image":"kebab.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":1},{"id":3,"name":"LA POPEYE","ingredients":"Epinard à la crème, mozzarella, chèvre, tomates fraîches, oignons frais, thym, herbes de provence.","image":"popeye.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":2}]',
-      //   total_amount: "62",
-      //   status: 0,
-      //   createdAt: "2020-09-01T19:25:28.000Z",
-      //   updatedAt: "2020-09-01T19:25:28.000Z",
-      // },
-      // {
-      //   id: 4,
-      //   client_fullname: "Yann LE BOSS",
-      //   client_phonenumber: "678-524-8038",
-      //   client_address: "3170  Hanifan Lane",
-      //   articles:
-      //     '[{"id":2,"name":"LA NOCTAMBULE","ingredients":"Crème fraîche, mozzarella, lardons, oignons frais, origan.","image":"noctambule.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":4},{"id":1,"name":"LA KEBAB","ingredients":"Sauce yaourt à l’ail, mozzarella, viande kebab, tomates fraîches, oignons frais.","image":"kebab.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":1},{"id":3,"name":"LA POPEYE","ingredients":"Epinard à la crème, mozzarella, chèvre, tomates fraîches, oignons frais, thym, herbes de provence.","image":"popeye.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":2}]',
-      //   total_amount: "62",
-      //   status: 0,
-      //   createdAt: "2020-09-01T19:25:28.000Z",
-      //   updatedAt: "2020-09-01T19:25:28.000Z",
-      // },
+      {
+        id: 2,
+        client_fullname: "Yann LE BOSS",
+        client_phonenumber: "678-524-8038",
+        client_address: "3170  Hanifan Lane",
+        articles:
+          '[{"id":2,"name":"LA NOCTAMBULE","ingredients":"Crème fraîche, mozzarella, lardons, oignons frais, origan.","image":"noctambule.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":4},{"id":1,"name":"LA KEBAB","ingredients":"Sauce yaourt à l’ail, mozzarella, viande kebab, tomates fraîches, oignons frais.","image":"kebab.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":1},{"id":3,"name":"LA POPEYE","ingredients":"Epinard à la crème, mozzarella, chèvre, tomates fraîches, oignons frais, thym, herbes de provence.","image":"popeye.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":2}]',
+        total_amount: "62",
+        status: 0,
+        createdAt: "2020-09-01T19:25:28.000Z",
+        updatedAt: "2020-09-01T19:25:28.000Z",
+      },
+      {
+        id: 3,
+        client_fullname: "Yann LE BOSS",
+        client_phonenumber: "678-524-8038",
+        client_address: "3170  Hanifan Lane",
+        articles:
+          '[{"id":2,"name":"LA NOCTAMBULE","ingredients":"Crème fraîche, mozzarella, lardons, oignons frais, origan.","image":"noctambule.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":4},{"id":1,"name":"LA KEBAB","ingredients":"Sauce yaourt à l’ail, mozzarella, viande kebab, tomates fraîches, oignons frais.","image":"kebab.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":1},{"id":3,"name":"LA POPEYE","ingredients":"Epinard à la crème, mozzarella, chèvre, tomates fraîches, oignons frais, thym, herbes de provence.","image":"popeye.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":2}]',
+        total_amount: "62",
+        status: 0,
+        createdAt: "2020-09-01T19:25:28.000Z",
+        updatedAt: "2020-09-01T19:25:28.000Z",
+      },
+      {
+        id: 4,
+        client_fullname: "Yann LE BOSS",
+        client_phonenumber: "678-524-8038",
+        client_address: "3170  Hanifan Lane",
+        articles:
+          '[{"id":2,"name":"LA NOCTAMBULE","ingredients":"Crème fraîche, mozzarella, lardons, oignons frais, origan.","image":"noctambule.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":4},{"id":1,"name":"LA KEBAB","ingredients":"Sauce yaourt à l’ail, mozzarella, viande kebab, tomates fraîches, oignons frais.","image":"kebab.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":1},{"id":3,"name":"LA POPEYE","ingredients":"Epinard à la crème, mozzarella, chèvre, tomates fraîches, oignons frais, thym, herbes de provence.","image":"popeye.png","createdAt":"2020-09-01T16:29:59.000Z","updatedAt":"2020-09-01T16:29:59.000Z","number":2}]',
+        total_amount: "62",
+        status: 0,
+        createdAt: "2020-09-01T19:25:28.000Z",
+        updatedAt: "2020-09-01T19:25:28.000Z",
+      },
     ]);
   }, []);
 
