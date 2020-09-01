@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Pizza.css";
 
-function Pizza({ pizza }) {
+function Pizza({ pizza, addPizzaToCart }) {
   const iconsPath = require.context("../assets/img/", true);
 
   return (
@@ -12,10 +12,12 @@ function Pizza({ pizza }) {
         src={iconsPath("./" + pizza.img)}
         alt="pizza"
         height={150}
-        onClick={() => console.log("ajouter au panier")}
+        onClick={() => {
+          addPizzaToCart(pizza);
+        }}
       />
 
-      <div className="text-conatiner">
+      <div className="text-container">
         <h3>{pizza.name}</h3>
         <p>{pizza.ingredient}</p>
       </div>
