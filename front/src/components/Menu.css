@@ -1,0 +1,19 @@
+.screen {
+  display: flex;
+}
+
+.menu {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.pizzas-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ebebeb;
+}
+
+h3,
+p {
+  color: #333;
+}

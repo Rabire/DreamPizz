@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className="header">
       <div className="navbar">
-        <a href="/accueil">
+        <a href="/">
           <img className="logo" src={Logo} alt="Logo of DreamPizz"></img>
         </a>
         <div>

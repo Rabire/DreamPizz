@@ -4,7 +4,16 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
-      <div></div>
+      <h1>SLIDER</h1>
+      <h1>SLIDER</h1>
+      <h1>SLIDER</h1>
+      <h1>SLIDER</h1>
+      <h1>SLIDER</h1>
+      <h1>SLIDER</h1>
+      <h1>SLIDER</h1>
+      <h1>SLIDER</h1>
+      <h1>SLIDER</h1>
+      <h1>SLIDER</h1>
     </div>
   );
 }
