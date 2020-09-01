@@ -3,14 +3,20 @@
 }
 
 .menu {
-  padding-left: 10%;
-  padding-right: 10%;
+  width: 75%;
+  margin-left: 20px;
+}
+
+.cart {
+  width: 25%;
+  padding-right: 20px;
 }
 
 .pizzas-conatiner {
   display: flex;
   flex-wrap: wrap;
   background-color: #ebebeb;
+  margin-right: 20px;
 }
 
 h3,

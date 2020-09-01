@@ -40,6 +40,7 @@ function Menu() {
         </div>
         <br />
       </div>
+
       <div className="cart">
         <h1>VOTRE PANIER: </h1> <br />
         <div className="articles-conatiner"></div>
