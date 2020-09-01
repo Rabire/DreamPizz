@@ -4,18 +4,9 @@ module.exports = (app) => {
   // Read all
   app.get("/pizzas", pizzas.findAll);
 
-  // // Read 1 user
-  // app.get("/users/:id", users.findById);
+  // Delete one user
+  app.delete("/pizza/:id", pizzas.deleteById);
 
-  // // Anonymize one user
-  // app.delete("/users/:id", users.softDeleteById);
-
-  // // Post to update or add
-  // app.post("/users", users.addUser);
-
-  // // Put to update a user
-  // app.put("/users/:id", users.updateUser);
-
-  // //post to login
-  // app.post("/users/login", users.login);
+  // Post to update or add
+  app.post("/pizza", pizzas.addPizza);
 };
