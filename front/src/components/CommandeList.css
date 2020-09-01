@@ -1,0 +1,26 @@
+.commandeScreen {
+  display: flex;
+  flex-direction: column;
+}
+.commandeRow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+/* .quantité {
+  font-size: 16px;
+  color: black;
+} */
+
+.client-name {
+  font-size: 23px;
+  font-weight: bold;
+}
+.commande-infos {
+  background-color: #ebebeb;
+  justify-content: space-between;
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
