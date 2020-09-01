@@ -32,6 +32,11 @@ function Menu() {
   const [pizzasInCart, setPizzasInCart] = useState([]);
   const [occurences, setOccurences] = useState(0);
 
+  function round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+  }
+
   const numberOfOccurences = (pizza) => {
     const count = pizzasInCart.reduce(function (n, val) {
       return n + (val.name === pizza.name);
@@ -64,15 +69,30 @@ function Menu() {
 
       <div className="cart">
         <h1>VOTRE PANIER: </h1> <br />
-        {pizzasInCart.map((pizzaInCart, index) => (
-          <Article
-            key={index}
-            pizza={pizzaInCart}
-            pizzasInCart={pizzasInCart}
-            numberOfOccurences={occurences}
-          />
-        ))}
-        {pizzasInCart.length === 0 && <h5>Votre panier est vide</h5>}
+        {pizzasInCart.length === 0 ? (
+          <h5>Votre panier est vide ...</h5>
+        ) : (
+          <div>
+            {pizzasInCart.map((pizzaInCart, index) => (
+              <Article
+                key={index}
+                pizza={pizzaInCart}
+                pizzasInCart={pizzasInCart}
+                numberOfOccurences={occurences}
+              />
+            ))}
+            <br />
+            <br />
+            <h1>Total: </h1>
+            <h3>{`${round(pizzasInCart.length * 8.9, 1)} Euros`}</h3>
+            <h3 className="order-button" onClick={() => console.log("order")}>
+              Passer la commande
+            </h3>
+            <i>Toutes les pizzas sont a 8.90 €</i>
+            <br />
+            <br />
+          </div>
+        )}
       </div>
       <br />
     </div>
