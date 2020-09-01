@@ -1,5 +1,5 @@
 import React from "react";
-import map from "../assets/img/mapF.PNG";
+import map from "../assets/img/mapF.png";
 import instagramIcon from "../assets/img/instagramIcon.png";
 import twitterIcon from "../assets/img/TwitterIcon.png";
 import facebookIcon from "../assets/img/facebookIcon.png";
