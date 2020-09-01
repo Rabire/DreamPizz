@@ -1,5 +1,7 @@
 import React from "react";
 
+import NoImg from "../assets/img/no-img.png";
+
 import "./Article.css";
 
 function Article({ pizza, numberOfOccurences }) {
@@ -9,7 +11,7 @@ function Article({ pizza, numberOfOccurences }) {
     <div className="article-infos">
       <img
         className="pizza-img"
-        src={iconsPath("./" + pizza.img)}
+        src={pizza.image ? iconsPath("./" + pizza.image) : NoImg}
         alt="pizza"
         height={90}
       />

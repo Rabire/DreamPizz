@@ -11,7 +11,7 @@ module.exports = {
           name: "LA KEBAB",
           ingredients:
             "Sauce yaourt à l’ail, mozzarella, viande kebab, tomates fraîches, oignons frais.",
-          image: "skebab.png",
+          image: "kebab.png",
           createdAt: new Date(),
           updatedAt: new Date(),
         },

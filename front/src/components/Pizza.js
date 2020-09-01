@@ -1,5 +1,7 @@
 import React from "react";
 
+import NoImg from "../assets/img/no-img.png";
+
 import "./Pizza.css";
 
 function Pizza({ pizza, addPizzaToCart }) {
@@ -9,7 +11,7 @@ function Pizza({ pizza, addPizzaToCart }) {
     <div className="pizza-info">
       <img
         className="pizza-img"
-        src={iconsPath("./" + pizza.img)}
+        src={pizza.image ? iconsPath("./" + pizza.image) : NoImg}
         alt="pizza"
         height={150}
         onClick={() => {
@@ -19,7 +21,7 @@ function Pizza({ pizza, addPizzaToCart }) {
 
       <div className="text-container">
         <h3>{pizza.name}</h3>
-        <p>{pizza.ingredient}</p>
+        <p>{pizza.ingredients}</p>
       </div>
     </div>
   );
