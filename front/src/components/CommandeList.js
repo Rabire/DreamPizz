@@ -62,7 +62,7 @@ function CommandeList() {
   ];
   return (
     <div className="commande-Screen">
-      <h1>Les commandes :</h1>
+      <h1>COMMANDES EN COURS :</h1>
       <div className="commande-row">
         {arrCommandes.map((client) => (
           <p>

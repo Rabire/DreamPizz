@@ -1,7 +1,7 @@
 .commande-Screen {
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  margin: 20px;
 }
 .commande-row {
   display: flex;
@@ -26,4 +26,8 @@
   display: flex;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
 }
