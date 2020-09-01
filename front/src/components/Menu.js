@@ -50,7 +50,12 @@ function Menu() {
   const decrementNumber = (id) => {
     const index = addedPizzas.findIndex((addedPizza) => id === addedPizza.id);
     addedPizzas[index].number--;
-    setPizzasInCart([...addedPizzas]);
+    if (addedPizzas[index].number !== 0) {
+      setPizzasInCart([...addedPizzas]);
+    } else {
+      addedPizzas.splice(index, 1);
+      setPizzasInCart([...addedPizzas]);
+    }
   };
 
   return (
