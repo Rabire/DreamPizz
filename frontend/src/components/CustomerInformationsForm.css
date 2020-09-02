@@ -17,7 +17,7 @@ input {
 .label {
   align-items: flex-end;
   height: 0;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .add-order-button {
@@ -47,4 +47,14 @@ input {
   border: 1px solid black;
   padding: 2%;
   background-color: white;
+}
+
+.checkbox-container {
+  width: 120px;
+  height: 30px;
+}
+
+.checkbox {
+  margin-left: 30px;
+  margin-top: 0;
 }

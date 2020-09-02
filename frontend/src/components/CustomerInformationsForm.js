@@ -55,9 +55,17 @@ function CustomerInformationsForm({
         <input type="text" name="client_address" onChange={handleChange} />
 
         <p className="label">Numéro de téléphone :</p>
+
         <input type="text" name="client_phonenumber" onChange={handleChange} />
-        <p className="label">A emporter</p>
-        <input name="takeaway" type="checkbox" onChange={handleChange} />
+        <div className="checkbox-container">
+          <p className="label">A emporter</p>
+          <input
+            className="checkbox"
+            name="takeaway"
+            type="checkbox"
+            onChange={handleChange}
+          />
+        </div>
         <button className="add-order-button" onClick={submitOrder}>
           Finaliser la commande
         </button>
