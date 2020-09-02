@@ -46,13 +46,13 @@ function CustomerInformationsForm({
       <h2>Veuillez renseignez vos informations</h2>
 
       <div className="form">
-        <p>Nom complet :</p>
+        <p className="label">Nom complet :</p>
         <input type="text" name="client_fullname" onChange={handleChange} />
 
-        <p>Adresse postale :</p>
+        <p className="label">Adresse postale :</p>
         <input type="text" name="client_address" onChange={handleChange} />
 
-        <p>Numéro de téléphone :</p>
+        <p className="label">Numéro de téléphone :</p>
         <input type="text" name="client_phonenumber" onChange={handleChange} />
         <button className="add-order-button" onClick={submitOrder}>
           Commander
