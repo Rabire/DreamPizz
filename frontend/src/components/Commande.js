@@ -55,6 +55,10 @@ function Commande({ order }) {
         <strong>Adresse : </strong>
         {order.client_address}
       </p>
+      <p>
+        <strong>Téléphone du client : </strong>
+        {order.client_phonenumber}
+      </p>
       <h3 className="status-btn" onClick={updateToNextStep}>
         {buttonText}
       </h3>
