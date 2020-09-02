@@ -16,10 +16,6 @@
   align-content: center;
 }
 
-.navbar a:hover {
-  color: black;
-}
-
 .navbar h1 {
   margin-left: 30px;
   color: White;
@@ -29,8 +25,12 @@
   height: 40px;
   width: 150px;
   cursor: pointer;
-  /* background: red; */
 }
 .Atext {
   margin: 10px;
+}
+
+.Atext:hover {
+  color: black;
+  background-color: white;
 }
