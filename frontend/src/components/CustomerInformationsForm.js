@@ -43,7 +43,7 @@ function CustomerInformationsForm({
       <button onClick={toggleModalVisibility} className="close-button">
         X
       </button>
-      <h2>Veuillez renseignez vos informations</h2>
+      <h2>Veuillez renseigner vos informations</h2>
 
       <div className="form">
         <p className="label">Nom complet :</p>
@@ -55,7 +55,7 @@ function CustomerInformationsForm({
         <p className="label">Numéro de téléphone :</p>
         <input type="text" name="client_phonenumber" onChange={handleChange} />
         <button className="add-order-button" onClick={submitOrder}>
-          Commander
+          Finaliser la commande
         </button>
       </div>
     </Modal>
