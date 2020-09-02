@@ -63,6 +63,9 @@ function Commande({ order, ordersApiCall }) {
         <strong>Téléphone du client : </strong>
         {order.client_phonenumber}
       </p>
+      <p>
+        <strong>{order.takeaway === "on" ? "A EMPORTER" : "SUR PLACE"}</strong>
+      </p>
       <h3 className="status-btn" onClick={updateToNextStep}>
         {buttonText}
       </h3>

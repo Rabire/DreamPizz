@@ -16,6 +16,7 @@ function CustomerInformationsForm({
     articles,
     total_amount,
     status: 1,
+    takeaway: "off",
   });
 
   function handleChange(e) {
@@ -24,6 +25,7 @@ function CustomerInformationsForm({
   }
 
   function submitOrder() {
+    console.log(newOrder);
     axios
       .post("http://localhost:3000/order", newOrder)
       .then(() => {
@@ -54,6 +56,8 @@ function CustomerInformationsForm({
 
         <p className="label">Numéro de téléphone :</p>
         <input type="text" name="client_phonenumber" onChange={handleChange} />
+        <p className="label">A emporter</p>
+        <input name="takeaway" type="checkbox" onChange={handleChange} />
         <button className="add-order-button" onClick={submitOrder}>
           Finaliser la commande
         </button>

@@ -28,6 +28,10 @@ const orderModel = {
     // 3: en cours de livraison
     // 4: livre
   },
+  takeaway: {
+    type: Sequelize.STRING,
+    defaultValue: "off",
+  },
   createdAt: {
     allowNull: false,
     type: Sequelize.DATE,
