@@ -111,6 +111,7 @@ function Menu() {
                 toggleModalVisibility={toggleModalVisibility}
                 articles={JSON.stringify(pizzasInCart)}
                 total_amount={amount}
+                setPizzasInCart={setPizzasInCart}
               />
             )}
             <i>Toutes les pizzas sont a 8.90 €</i>

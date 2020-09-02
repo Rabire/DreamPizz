@@ -10,6 +10,7 @@ function CustomerInformationsForm({
   toggleModalVisibility,
   articles,
   total_amount,
+  setPizzasInCart,
 }) {
   const [newOrder, setNewOrder] = useState({
     articles,
@@ -23,12 +24,11 @@ function CustomerInformationsForm({
   }
 
   function submitOrder() {
-    console.log({ newOrder });
     axios
       .post("http://localhost:3000/order", newOrder)
-      .then((res) => {
-        console.log(res);
+      .then(() => {
         toggleModalVisibility();
+        setPizzasInCart([]);
       })
       .catch(console.log);
   }
