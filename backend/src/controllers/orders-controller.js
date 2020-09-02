@@ -11,6 +11,24 @@ exports.findAll = (req, res) => {
     });
 };
 
+exports.findById = (req, res) => {
+  const urlId = req.params.id;
+
+  Orders.findOne({
+    where: {
+      id: urlId,
+    },
+  })
+    .then((orderFound) => {
+      if (orderFound) {
+        res.status(200).send(orderFound);
+      } else {
+        res.status(400).send("order id not found");
+      }
+    })
+    .catch(() => res.sendStatus(500));
+};
+
 exports.addOrder = async (req, res) => {
   Orders.create(req.body)
     .then(res.sendStatus(201))

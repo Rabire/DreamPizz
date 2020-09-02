@@ -18,6 +18,9 @@ module.exports = (app) => {
   // Read all orders
   app.get("/orders", orders.findAll);
 
+  // Read 1 order
+  app.get("/order/:id", orders.findById);
+
   // create order
   app.post("/order", orders.addOrder);
 
