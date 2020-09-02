@@ -22,6 +22,9 @@ function CommandeList() {
 
   return (
     <div className="commande-screen">
+      <a className="add-pizza-btn" href="create-pizza">
+        Ajouter une pizza au menu
+      </a>
       <h1>COMMANDES EN COURS :</h1>
       <div className="commande-list">
         {allOrders
@@ -43,9 +46,6 @@ function CommandeList() {
             <Commande key={filteredOrder.id} order={filteredOrder} />
           ))}
       </div>
-      <a className="add-pizza-btn" href="create-pizza">
-        Ajouter une pizza
-      </a>
     </div>
   );
 }
