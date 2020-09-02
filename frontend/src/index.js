@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import CommandeList from "./components/CommandeList";
+import PizzaForm from "./components/PizzaForm";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Route exact path="/" component={App} />
       <Route path="/menu" component={Menu} />
+      <Route path="/create-pizza" component={PizzaForm} />
       <Route path="/administration" component={CommandeList} />
     </BrowserRouter>
     <Footer />

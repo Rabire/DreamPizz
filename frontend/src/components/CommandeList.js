@@ -62,13 +62,16 @@ function CommandeList() {
   }, []);
 
   return (
-    <div className="commande-Screen">
+    <div className="commande-screen">
       <h1>COMMANDES EN COURS :</h1>
       <div className="commande-list">
         {allOrders.map((order) => (
           <Commande key={order.id} order={order} />
         ))}
       </div>
+      <a className="add-pizza-btn" href="create-pizza">
+        Ajouter une pizza
+      </a>
     </div>
   );
 }
