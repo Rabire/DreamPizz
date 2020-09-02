@@ -1,4 +1,4 @@
-.commande-Screen {
+.commande-screen {
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -11,4 +11,20 @@
 
 h1 {
   margin-bottom: 20px;
+}
+
+.add-pizza-btn {
+  background-color: dodgerblue;
+  color: white;
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid dodgerblue;
+  cursor: pointer;
+}
+
+.add-pizza-btn:hover {
+  background-color: white;
+  color: dodgerblue;
 }
