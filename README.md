@@ -1,82 +1,66 @@
-# Set up the project
+# Installer le projet
 
-## Clone the project
-
-Clone this project in your workspace or in your production environment:
+Copier le projet :
 
 ```
-cd /yourworkspace
-git clone https://github.com/iomentum/auth-boilerplate.git
-cd ./auth-boilerplate
+cd/votreespacedetravail
+git clone https://github.com/Rabire/DreamPizz.git
 ```
 
-## Install dependencies
+# Installer les dependances
 
-The following commands will create a `node_modules` folder.
-
-### Front-end
-
-Place yourself in the frontend directory and install dependencies:
+Installer les nodes.modules :
 
 ```
 cd ./frontend
 npm i
 ```
 
-### Back-end
+# Lancer le projet
 
-Go back in the auth-boilerplate project then in the backend directory and install dependencies:
+Frontend :
+
+```
+cd/frontend
+npm start
+```
+
+Backend :
+
+```
+cd/backend
+docker-compose up
+npm start
+```
+
+## Back-end
+
+Installer les dependances:
 
 ```
 cd ../backend
 npm i
 ```
 
-## Run migrations
+## Lancer les migrations
 
-Migrations allows us to create the table.
-Make sure to have docker installed and running to set up the mysql database.
+Installer Docker :
 
-Run the migrations in the backend directory while mysql is running:
+Lancer les migrations dans le backend tout en ayant lancer mysql:
 
 ```
 docker-compose up
 npm run migrate
 ```
 
-( To undo migrations, type: `npm run migrate:undo` )
+(Pour enlever les migrations: `npm run migrate:undo`)
 
-## Run seeders
+## Lancer les seeders
 
-Seeders allows us to create default datas in the table.
-
-```
-The super Admin user is created during the seed.
-
-email: sa@iomentum.com
-password: admin
-```
-
-Run the seeders in the backend directory while mysql is running and migrations are done:
+Lancer les seeders en ayant lancer MySql:
 
 ```
 npm run seed
 ```
 
-( To undo seeders, type: `npm run seed:undo` )
-
-# Start the project
-
-Run the backend side of the project from the backend directory:
-
-```
-docker-compose up
-npm start
-```
-
-Run the frontend side of the project from the frontend directory:
-
-```
-cd ../frontend
-npm start
-```
+(Pour enlever les seeders: `npm run seed:undo`)
