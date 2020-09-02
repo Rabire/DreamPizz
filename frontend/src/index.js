@@ -9,6 +9,7 @@ import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import CommandeList from "./components/CommandeList";
 import PizzaForm from "./components/PizzaForm";
+import Facture from "./components/Facture";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path="/menu" component={Menu} />
       <Route path="/create-pizza" component={PizzaForm} />
       <Route path="/administration" component={CommandeList} />
+      <Route path="/facture" component={Facture} />
     </BrowserRouter>
     <Footer />
   </React.StrictMode>,

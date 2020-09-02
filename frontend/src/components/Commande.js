@@ -66,9 +66,16 @@ function Commande({ order, ordersApiCall }) {
       <p>
         <strong>{order.takeaway === "on" ? "A EMPORTER" : "SUR PLACE"}</strong>
       </p>
-      <h3 className="status-btn" onClick={updateToNextStep}>
-        {buttonText}
-      </h3>
+      <div className="buttons">
+        <h3 className="status btn" onClick={updateToNextStep}>
+          {buttonText}
+        </h3>
+        <a href={`/facture/${order.id}`}>
+          <h3 className="bl btn" onClick={updateToNextStep}>
+            Bon de livraison / Facture
+          </h3>
+        </a>
+      </div>
     </div>
   );
 }

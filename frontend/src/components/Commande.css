@@ -6,18 +6,33 @@
   width: 30%;
 }
 
-.status-btn {
-  background-color: green;
+.btn {
   padding: 5px;
   border-radius: 10px;
   text-align: center;
-  color: white;
-  border: 2px solid green;
   cursor: pointer;
   margin: 0;
+  margin-bottom: 5px;
 }
 
-.status-btn:hover {
+.status {
+  color: white;
+  background-color: green;
+  border: 2px solid green;
+}
+
+.status:hover {
   color: green;
+  background-color: white;
+}
+
+.bl {
+  color: white;
+  background-color: dodgerblue;
+  border: 2px solid dodgerblue;
+}
+
+.bl:hover {
+  color: dodgerblue;
   background-color: white;
 }
