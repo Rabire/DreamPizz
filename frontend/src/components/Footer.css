@@ -4,6 +4,7 @@
   bottom: 0;
   display: flex;
   justify-content: space-between;
+  height: 30vh;
 }
 
 .map {
