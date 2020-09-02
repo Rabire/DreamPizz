@@ -13,12 +13,15 @@ import PizzaForm from "./components/PizzaForm";
 ReactDOM.render(
   <React.StrictMode>
     <Header />
-    <BrowserRouter>
-      <Route exact path="/" component={App} />
-      <Route path="/menu" component={Menu} />
-      <Route path="/create-pizza" component={PizzaForm} />
-      <Route path="/administration" component={CommandeList} />
-    </BrowserRouter>
+    <div class="whitespace">
+      {" "}
+      <BrowserRouter>
+        <Route exact path="/" component={App} />
+        <Route path="/menu" component={Menu} />
+        <Route path="/create-pizza" component={PizzaForm} />
+        <Route path="/administration" component={CommandeList} />
+      </BrowserRouter>
+    </div>
     <Footer />
   </React.StrictMode>,
   document.getElementById("root")
