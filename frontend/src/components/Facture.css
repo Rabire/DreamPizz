@@ -2,7 +2,21 @@
 }
 
 .bill {
-  background-color: dodgerblue;
+  background-color: #ebebeb;
+  padding: 50px;
+  margin: 10px;
+  border-radius: 10px;
   width: 60%;
   margin-left: 20%;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.infos-header {
+  display: flex;
+  justify-content: space-between;
 }
