@@ -19,3 +19,12 @@ exports.addOrder = async (req, res) => {
       res.sendStatus(500);
     });
 };
+
+exports.changeStatus = (req, res) => {
+  Orders.update(req.body, { where: { id: req.params.id } })
+    .then(res.sendStatus(200))
+    .catch((error) => {
+      console.log(error);
+      res.sendStatus(500);
+    });
+};

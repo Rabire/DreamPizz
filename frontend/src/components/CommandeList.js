@@ -21,9 +21,20 @@ function CommandeList() {
     <div className="commande-Screen">
       <h1>COMMANDES EN COURS :</h1>
       <div className="commande-list">
-        {allOrders.map((order) => (
-          <Commande key={order.id} order={order} />
-        ))}
+        {allOrders
+          .filter((order) => order.status <= 3)
+          .map((filteredOrder) => (
+            <Commande key={filteredOrder.id} order={filteredOrder} />
+          ))}
+      </div>
+      <br />
+      <h1>COMMANDES LIVREES :</h1>
+      <div className="commande-list">
+        {allOrders
+          .filter((order) => order.status > 3)
+          .map((filteredOrder) => (
+            <Commande key={filteredOrder.id} order={filteredOrder} />
+          ))}
       </div>
     </div>
   );

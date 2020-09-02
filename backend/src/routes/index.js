@@ -22,11 +22,5 @@ module.exports = (app) => {
   app.post("/order", orders.addOrder);
 
   // confirmation
-  // app.put("/pizza/:id", orders.confirmation);
-
-  // preparation
-  // app.put("/pizza/:id", orders.preparation);
-
-  // livraison
-  // app.put("/pizza/:id", orders.livraison);
+  app.put("/order/:id", orders.changeStatus);
 };

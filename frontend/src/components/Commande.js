@@ -1,11 +1,31 @@
 import React from "react";
-
+import axios from "axios";
 import "./Commande.css";
 
 function Commande({ order }) {
-  const updateToNextStep = () => {
-    // API PUT
+  const updateToNextStep = (res) => {
+    axios
+      .put("http://localhost:3000/order/" + order.id, {
+        status: order.status + 1,
+      })
+      .catch(console.log());
   };
+
+  let buttonText = "";
+  switch (order.status) {
+    case 1:
+      buttonText = `Passer la commande à "En cours de préparation"`;
+      break;
+    case 2:
+      buttonText = `Passer la commande à "En cours de livraison"`;
+      break;
+    case 3:
+      buttonText = `Passer la commande à "Livrée"`;
+      break;
+    default:
+      buttonText = "Livrée";
+      break;
+  }
 
   return (
     <div key={order.id} className="commande-infos">
@@ -24,6 +44,10 @@ function Commande({ order }) {
         ))}
       </p>
       <p>
+        <strong>Montant total : </strong>
+        {`${order.total_amount} €`}
+      </p>
+      <p>
         <strong>Heure de la commande : </strong>
         {order.createdAt}
       </p>
@@ -32,7 +56,7 @@ function Commande({ order }) {
         {order.client_address}
       </p>
       <h3 className="status-btn" onClick={updateToNextStep}>
-        Passer la commande en cours de préparation
+        {buttonText}
       </h3>
     </div>
   );

@@ -48,7 +48,7 @@ function Menu() {
   /* Calcul du prix total */
   let amount = 0;
   for (const product of pizzasInCart) {
-    amount = round(amount + product.number * 8.9, 1);
+    amount = round(amount + product.number * 9, 1);
   }
 
   /* Logique des boutons pour ajouter/retirer des pizzas au panier */
@@ -114,7 +114,7 @@ function Menu() {
                 setPizzasInCart={setPizzasInCart}
               />
             )}
-            <i>Toutes les pizzas sont a 8.90 €</i>
+            <i>Toutes les pizzas sont à 9 €</i>
             <br />
             <br />
           </div>
