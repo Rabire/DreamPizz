@@ -14,7 +14,6 @@ ReactDOM.render(
   <React.StrictMode>
     <Header />
     <div class="whitespace">
-      {" "}
       <BrowserRouter>
         <Route exact path="/" component={App} />
         <Route path="/menu" component={Menu} />
