@@ -2,11 +2,15 @@ import React from "react";
 import axios from "axios";
 import "./Commande.css";
 
-function Commande({ order }) {
+function Commande({ order, ordersApiCall }) {
   const updateToNextStep = (res) => {
     axios
       .put("http://localhost:3000/order/" + order.id, {
         status: order.status + 1,
+      })
+      .then(() => {
+        ordersApiCall();
+        ordersApiCall();
       })
       .catch(console.log());
   };

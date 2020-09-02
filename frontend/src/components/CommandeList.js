@@ -7,14 +7,17 @@ import "./CommandeList.css";
 function CommandeList() {
   const [allOrders, setAllOrders] = useState([]);
 
-  useEffect(() => {
+  const ordersApiCall = () => {
     axios
       .get("http://localhost:3000/orders")
       .then((res) => {
         setAllOrders(res.data);
-        console.log(setAllOrders);
       })
       .catch(console.log());
+  };
+
+  useEffect(() => {
+    ordersApiCall();
   }, []);
 
   return (
@@ -24,7 +27,11 @@ function CommandeList() {
         {allOrders
           .filter((order) => order.status <= 3)
           .map((filteredOrder) => (
-            <Commande key={filteredOrder.id} order={filteredOrder} />
+            <Commande
+              key={filteredOrder.id}
+              order={filteredOrder}
+              ordersApiCall={ordersApiCall}
+            />
           ))}
       </div>
       <br />
