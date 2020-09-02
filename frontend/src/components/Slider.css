@@ -11,8 +11,16 @@
   padding: 0;
   /* padding-top: 15px; */
 }
-.titlePizza {
+.welcome-parse {
   padding-top: 8px;
   text-align: center;
-  color: grey;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  font-weight: bold;
+  font-family: Impact;
+  font-size: 100px;
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 25%;
 }

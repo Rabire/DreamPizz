@@ -14,6 +14,7 @@ const slideImages = [Pizza1, Pizza2, Pizza3, Pizza4, Pizza5];
 const Slideshow = () => {
   return (
     <div className="Slidercontainer">
+      <h1 className="welcome-parse">DreamPizz, la pizza de vos rêves !</h1>
       <Slide easing="ease">
         <div className="each-slide">
           <div
@@ -47,7 +48,6 @@ const Slideshow = () => {
           <div style={{ backgroundImage: `url(${slideImages[4]})` }}></div>
         </div>
       </Slide>
-      <h1 className="titlePizza">Chez DreamPizz, la pizza de vos rêves !</h1>
     </div>
   );
 };
